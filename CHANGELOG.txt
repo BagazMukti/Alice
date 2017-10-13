@@ -5,3 +5,8 @@ Version 1.1
 * Some bug fixed
 * Adding feature random user agent
 * Input using read
+
+Version 1.2
+* Changing input using arguments again
+* Adding feature proxy
+* Some bug fixed
