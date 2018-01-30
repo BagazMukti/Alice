@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
 # Files and Directories Bruteforce
 # Codename: Alice
 # Author: Bagaz Mukti
@@ -45,7 +45,11 @@ else
 [$(date +%H:%M:%S)] Starting bruteforce..."
 	dirs=$(cat $2)
 	for dir in $dirs; do
-		url="$1/$dir"
+		if echo $1 | grep -q "http://"; then
+			url="$1/$dir"
+		else
+			url="http://$1/$dir"
+		fi
 		if [ $proxy = "null" ]; then
 			cek=$(curl -IsA "$ua" $url | head -n 1)
 		else
