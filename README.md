@@ -1,5 +1,5 @@
 # Alice
-Alice is files and directory bruteforce
+Alice is tool for bruteforce files and directories
 
 How to use:
 ```
